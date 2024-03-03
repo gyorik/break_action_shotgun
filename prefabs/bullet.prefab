@@ -1,0 +1,95 @@
+{
+  "RootObject": {
+    "Id": "ca0830b6-1b8d-4f64-86d3-3e7a9ec464c4",
+    "Name": "bullet",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Bullet",
+        "ShootDamage": 9
+      },
+      {
+        "__type": "Gib",
+        "Health": 5,
+        "IsStatic": false,
+        "Model": "models/weapons/sbox_ammo/9mm_bullet/9mm_bullet.vmdl",
+        "OnPropBreak": null,
+        "OnPropTakeDamage": null,
+        "ShowCreatedComponents": false
+      },
+      {
+        "__type": "AwakeActionComponent",
+        "Action": {
+          "Version": 5,
+          "UserData": {
+            "Title": "Action",
+            "id": "b0b00e9e-eb57-4fec-83fd-1f6912182ba0",
+            "ReferencedComponentTypes": [
+              "Sandbox.Game/Sandbox.Gib"
+            ]
+          },
+          "Variables": [],
+          "Nodes": [
+            {
+              "Id": 0,
+              "Type": "input"
+            },
+            {
+              "Id": 1,
+              "Type": "scene.get",
+              "Properties": {
+                "T": "Sandbox.Game/Sandbox.Gib"
+              },
+              "UserData": {
+                "Position": "-16,112"
+              }
+            },
+            {
+              "Id": 2,
+              "Type": "property.set",
+              "Properties": {
+                "_name": "FadeTime",
+                "_type": "Sandbox.Game/Sandbox.Gib"
+              },
+              "UserData": {
+                "Position": "272,128"
+              }
+            }
+          ],
+          "Links": [
+            {
+              "SrcId": 0,
+              "SrcName": "_target",
+              "DstId": 1,
+              "DstName": "_this"
+            },
+            {
+              "SrcId": 0,
+              "SrcName": "_signal",
+              "DstId": 2,
+              "DstName": "_signal"
+            },
+            {
+              "SrcId": 1,
+              "SrcName": "_result",
+              "DstId": 2,
+              "DstName": "_target"
+            },
+            {
+              "Value": 10,
+              "DstId": 2,
+              "DstName": "_value"
+            }
+          ]
+        }
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "facepunch.sandbox"
+  ]
+}

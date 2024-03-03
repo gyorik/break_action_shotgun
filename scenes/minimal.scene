@@ -196,14 +196,6 @@
       ]
     },
     {
-      "Id": "5baa5618-3c91-41c5-af07-e3b91bcf6dd1",
-      "Name": "player",
-      "Position": "85.58832,81.73804,210",
-      "Tags": "player",
-      "Enabled": true,
-      "__Prefab": "prefabs/player/player.prefab"
-    },
-    {
       "Id": "91c62701-5f0e-46f9-8312-7fa8aff90ed8",
       "Name": "Plane",
       "Position": "0,-748.0724,286.6424",
@@ -229,6 +221,13 @@
           "Surface": null
         }
       ]
+    },
+    {
+      "Id": "76b8839c-d9ca-40e8-b47c-26e07de86abc",
+      "Name": "player",
+      "Tags": "player",
+      "Enabled": true,
+      "__Prefab": "prefabs/player/player.prefab"
     }
   ],
   "SceneProperties": {
@@ -254,7 +253,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-03T18:42:47.4980341\u002B01:00",
+  "LastSaved": "2024-03-03T23:42:57.9191644\u002B01:00",
   "__references": [
     "matek.dev_checker_purple"
   ]

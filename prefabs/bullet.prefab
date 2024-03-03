@@ -2,6 +2,7 @@
   "RootObject": {
     "Id": "ca0830b6-1b8d-4f64-86d3-3e7a9ec464c4",
     "Name": "bullet",
+    "Tags": "bullet",
     "Enabled": true,
     "Components": [
       {
@@ -12,7 +13,7 @@
         "__type": "Gib",
         "Health": 5,
         "IsStatic": false,
-        "Model": "models/weapons/sbox_ammo/9mm_bullet/9mm_bullet.vmdl",
+        "Model": "models/dev/sphere.vmdl",
         "OnPropBreak": null,
         "OnPropTakeDamage": null,
         "ShowCreatedComponents": false
@@ -54,6 +55,27 @@
               "UserData": {
                 "Position": "272,128"
               }
+            },
+            {
+              "Id": 6,
+              "Type": "scene.get",
+              "Properties": {
+                "T": "Sandbox.Game/Sandbox.ModelRenderer"
+              },
+              "UserData": {
+                "Position": "-32,256"
+              }
+            },
+            {
+              "Id": 7,
+              "Type": "property.set",
+              "Properties": {
+                "_name": "RenderType",
+                "_type": "Sandbox.Game/Sandbox.ModelRenderer"
+              },
+              "UserData": {
+                "Position": "352,288"
+              }
             }
           ],
           "Links": [
@@ -79,9 +101,50 @@
               "Value": 10,
               "DstId": 2,
               "DstName": "_value"
+            },
+            {
+              "SrcId": 0,
+              "SrcName": "_target",
+              "DstId": 6,
+              "DstName": "_this"
+            },
+            {
+              "SrcId": 2,
+              "SrcName": "_signal",
+              "DstId": 7,
+              "DstName": "_signal"
+            },
+            {
+              "SrcId": 6,
+              "SrcName": "_result",
+              "DstId": 7,
+              "DstName": "_target"
+            },
+            {
+              "Value": "Off",
+              "DstId": 7,
+              "DstName": "_value"
             }
           ]
         }
+      },
+      {
+        "__type": "Rigidbody",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "SphereCollider",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 1,
+        "Static": false,
+        "Surface": null
       }
     ],
     "Children": []
@@ -89,7 +152,5 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": [
-    "facepunch.sandbox"
-  ]
+  "__references": []
 }

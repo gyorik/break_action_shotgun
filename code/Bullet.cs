@@ -28,6 +28,12 @@ public sealed class
 	{
 	}
 
+	protected override void OnStart()
+	{
+		var physicsBodyPhysicsGroup = Components.Get<Rigidbody>().RigidbodyFlags;
+		Log.Info( physicsBodyPhysicsGroup );
+	}
+
 	protected override void OnUpdate()
 	{
 

@@ -71,13 +71,14 @@
       },
       {
         "__type": "SimpleShooter",
+        "BulletCount": 12,
         "BulletGravityScale": 0,
-        "BulletHealth": 0,
+        "BulletHealth": 1,
         "BulletPrefab": {
           "_type": "gameobject",
           "prefab": "prefabs/bullet.prefab"
         },
-        "BulletSize": 10,
+        "BulletSize": 0.2,
         "BulletWeight": 10,
         "Camera": {
           "_type": "gameobject",
@@ -85,7 +86,8 @@
         },
         "ShootDamage": 10,
         "ShootRate": 0.3,
-        "ShootVelocity": 100
+        "ShootVelocity": 1000,
+        "Spread": 0.2
       }
     ],
     "Children": [
@@ -395,7 +397,7 @@
             },
             "Priority": 0,
             "TimeSinceActiveChanged": {
-              "Relative": 15777.403
+              "Relative": 8205.145
             }
           },
           {
@@ -413,7 +415,7 @@
             "SlideFriction": 0.01,
             "SlideSpeed": 300,
             "TimeSinceActiveChanged": {
-              "Relative": 15777.403
+              "Relative": 8205.145
             },
             "WishDirectionScale": 0.5
           },
@@ -428,7 +430,7 @@
             "Priority": 1,
             "SprintSpeed": 300,
             "TimeSinceActiveChanged": {
-              "Relative": 15777.403
+              "Relative": 8205.145
             }
           }
         ]
